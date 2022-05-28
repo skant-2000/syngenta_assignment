@@ -1,0 +1,42 @@
+.main {
+    width: 30%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+}
+
+.main > input, .main > button {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.main > input {
+    height: 20px;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+
+.main > input:focus {
+    outline: none;
+}
+
+.main > input::placeholder {
+    letter-spacing: 2px;
+}
+
+.main > button {
+    height: 35px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.main > button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
