@@ -9,12 +9,14 @@ export default function EmptyDiv() {
 
     const replace = (bln) => {
 
-        balloon.splice(bln.id - 1, 0, bln)
-        setBalloon(balloon)
+        // replacing balloon to its original position.....
+        let selectedBalloon = shootedBalloon.filter((item) => item.id === bln.id)
+        let newBalloon = [...balloon, selectedBalloon[0]]
+        newBalloon.sort((a,b) => a.id - b.id)
+        setBalloon(newBalloon)
 
-        setShootedBalloon(shootedBalloon.filter((item) => item.id !== bln.id ))
-
-        console.log("lol", balloon)
+        // removing balloon from the shooted balloon div.....
+        setShootedBalloon(shootedBalloon.filter((item) => item.id !== bln.id))
     }
 
   return (

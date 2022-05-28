@@ -10,8 +10,7 @@ export default function BalloonDiv() {
     
     useEffect(() => {
 
-        // Generating balloons with unique random color
-
+        // Generating balloons with unique random color.....
         let balloons = []
 
         for ( let i = 1; i <= 5; i++ ) {
