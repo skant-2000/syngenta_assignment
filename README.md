@@ -1,2 +1,2 @@
 # syngenta_assignment
-Placemt assignment given by Syngenta.
+Placement assignment given by Syngenta.
