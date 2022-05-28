@@ -40,8 +40,6 @@ export default function BalloonDiv() {
         setBalloon(balloons)
     }, [])
 
-    console.log(balloon)
-
   return (
     <>
     {balloon ? (

@@ -7,7 +7,8 @@ export const BalloonContextProvider = ({children}) => {
     const [balloon, setBalloon] = useState(null)
     const [shootedBalloon, setShootedBalloon] = useState([])
 
-    console.log(shootedBalloon)
+    console.log("balloon", balloon)
+    console.log("shooted balloon", shootedBalloon)
 
     return (
         <BalloonContext.Provider value={{balloon, setBalloon, shootedBalloon, setShootedBalloon}}>

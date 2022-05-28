@@ -5,11 +5,16 @@ import styles from "../styles/EmptyDiv.module.css"
 
 export default function EmptyDiv() {
 
-    const { shootedBalloon } = useContext(BalloonContext)
+    const { balloon, setBalloon, shootedBalloon, setShootedBalloon } = useContext(BalloonContext)
 
-    const replace = (item) => {
-        console.log(item)
-        console.log("x")
+    const replace = (bln) => {
+
+        balloon.splice(bln.id - 1, 0, bln)
+        setBalloon(balloon)
+
+        setShootedBalloon(shootedBalloon.filter((item) => item.id !== bln.id ))
+
+        console.log("lol", balloon)
     }
 
   return (
