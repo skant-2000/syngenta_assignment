@@ -1,2 +1,2 @@
 # syngenta_assignment
-Placement assignment given by Syngenta.
+Balloon Shooting Game Assignment given by Syngenta.
