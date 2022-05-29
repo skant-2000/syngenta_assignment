@@ -1,9 +1,8 @@
 .main {
     width: 30%;
     margin-top: 50px;
-    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
     border-radius: 10px;
-    padding: 10px;
 }
 
 .main > h3 {
@@ -12,6 +11,13 @@
 }
 
 .main > div:nth-child(2) {
+    height: 2px;
+    background-color: black;
+    width: 70%;
+    margin: auto;
+}
+
+.main > div:nth-child(3) {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -19,11 +25,57 @@
     margin-top: 30px;
 }
 
-.main > div:nth-child(2) > div {
-    width: 100px;
-    height: 100px;
+.main > div:nth-child(3) > div {
     border-radius: 50%;
     margin: 5%;
     border: 1px solid black;
     cursor: pointer;
+}
+
+/* media query for small screen size */
+@media screen and (max-width: 600px) {
+    .main {
+        padding: 2px;
+    }
+
+    .main > h3 {
+        font-size: 10px;
+    }
+
+    .main > div:nth-child(3) > div {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* media query for medium screen size */
+@media screen and (min-width: 600px) {
+    .main {
+        padding: 5px;
+    }
+
+    .main > h3 {
+        font-size: 12px;
+    }
+
+    .main > div:nth-child(3) > div {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* media query for large screen size */
+@media screen and (min-width: 1000px) {
+    .main {
+        padding: 10px;
+    }
+
+    .main > h3 {
+        font-size: 18px;
+    }
+
+    .main > div:nth-child(3) > div {
+        width: 100px;
+        height: 100px;
+    }
 }

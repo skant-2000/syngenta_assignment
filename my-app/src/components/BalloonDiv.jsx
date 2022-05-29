@@ -14,14 +14,17 @@ export default function BalloonDiv() {
         let balloons = []
 
         for ( let i = 1; i <= 5; i++ ) {
+
             function hexCodeFunc () {
-                const hexCode = "#" + Math.floor(Math.random() * 16777215).toString(16)
+                
+                const hexCode = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, 0);
 
                 let alreadyPresent = false
                 
                 for ( let j = 0; j < balloons.length; j++ ) {
                     if ( balloons[j].color === hexCode ) {
                         alreadyPresent = true
+                        break;
                     }
                 }
 
@@ -30,7 +33,7 @@ export default function BalloonDiv() {
                 }
                 else {
                     balloons.push({id: i, color: hexCode})
-                }
+                } 
             }
 
             hexCodeFunc()

@@ -22,6 +22,7 @@ export default function EmptyDiv() {
   return (
     <div className={styles.main}>
         <h3>Shooted Balloon</h3>
+        <div></div>
         <div>
             {shootedBalloon.map((item) => (
                 <div key={item.id} style={{backgroundColor: item.color}} onClick={() => replace(item)}>

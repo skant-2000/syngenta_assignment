@@ -3,11 +3,9 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    padding-top: 150px;
 }
 
 .main > input, .main > button {
-    width: 50%;
     margin: 10px auto;
 }
 
@@ -23,7 +21,11 @@
 
 .main > input::placeholder {
     letter-spacing: 2px;
-} 
+}
+
+.main > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 
 .main > button {
     height: 35px;
@@ -31,7 +33,6 @@
     color: black;
     border: 1px solid black;
     border-radius: 5px;
-    font-size: 17px;
     letter-spacing: 2px;
 }
 
@@ -39,4 +40,65 @@
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+
+/* media query for small screen size */
+@media screen and (max-width: 600px) {
+    .main {
+        padding-top: 100px;
+    }
+
+    .main > input, .main > button {
+        width: 80%;
+    }
+
+    .main > input::placeholder {
+        font-size: 8px;
+    }
+
+    .main > button {
+        height: 25px;
+        font-size: 10px;
+    }
+}
+
+/* media query for medium screen size */
+@media screen and (min-width: 600px) {
+    .main {
+        padding-top: 130px;
+    }
+
+    .main > input, .main > button {
+        width: 65%;
+    }
+
+    .main > input::placeholder {
+        font-size: 10px;
+    }
+
+    .main > button {
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+/* media query for large screen size */
+@media screen and (min-width: 1000px) {
+    .main {
+        padding-top: 150px;
+    }
+
+    .main > input, .main > button {
+        width: 50%;
+    }
+
+    .main > input::placeholder {
+        font-size: 13px;
+    }
+
+    .main > button {
+        height: 35px;
+        font-size: 17px;
+    }
 }

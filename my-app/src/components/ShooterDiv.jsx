@@ -33,7 +33,6 @@ export default function ShooterDiv() {
         setShootPosition("")
     }
 
-
   return (
     <div className={styles.main}>
         <input type="number" placeholder='shoot any balloon' value={shootPosition} onChange={(e) => setShootPosition(e.target.value)} />
